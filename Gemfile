@@ -18,6 +18,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'simple_form'
 gem 'sorcery'
 gem 'uglifier', '>= 1.3.0'
+gem 'validate_url'
 
 group :development do
   gem 'refills'
