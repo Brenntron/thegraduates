@@ -5,7 +5,7 @@ class UserSessionsController < ApplicationController
 
   def create
     if @user = login(params[:user][:email], params[:user][:password])
-      redirect_to root_path, notice: "Welcome back, #{user.name}!"
+      redirect_to root_path, notice: "Welcome back, #{@user.first_name}!"
     else
       @user = User.new(email: params[:user][:email])
       flash.alert = "We could not sign you in. Please check your email/password and try again."

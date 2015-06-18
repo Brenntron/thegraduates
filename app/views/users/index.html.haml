@@ -1,0 +1,10 @@
+- content_for(:paeg_title) do
+  %h1 Welcome, from the graduates!
+
+%h2 Our Alumni:
+
+= paginate @users
+
+%ul.user_pagination
+  - @users.each do |user|
+    %li.user= link_to "#{user.last_name}, #{user.first_name}", users_path(user)

@@ -1,0 +1,5 @@
+- content_for(:page_title) do
+  %h1.name= "#{@user.first_name} #{@user.last_name}"
+
+  .bio
+    %p= "Bio: #{@user.bio}"

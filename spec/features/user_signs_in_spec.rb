@@ -7,11 +7,11 @@ feature "user signs in" do
   end
 
   scenario "Returning user signs in" do
-    user = Fabricate(:user, name: "Jan")
+    user = Fabricate(:user, first_name: "Jan")
     fill_in "Email", with: user.email
     fill_in "Password", with: "password1"
     click_button "Sign In"
-    page.shoudl have_content("Welcome back, Jan")
+    page.should have_content("Welcome back, Jan")
     page.should_not have_content("Sign In")
     page.should_not have_content("Sign Up")
     page.should have_content("Sign Out")
@@ -22,7 +22,7 @@ feature "user signs in" do
   end
 
   scenario "returning user attempts to sign in with incorrect password" do
-    user = Fabricate(:user, name: "Bob")
+    user = Fabricate(:user, first_name: "Bob")
     fill_in "Email", with: user.email
     fill_in "Password", with: "wrongpassword"
     click_button "Sign In"
@@ -45,6 +45,6 @@ feature "user signs in" do
 
   scenario "user signs in with blanks" do
     click_on "Sign In"
-    page.should have_content("We could not sign up in. Please check you email/password and try again.")
+    page.should have_content("We could not sign you in. Please check your email/password and try again.")
   end
 end

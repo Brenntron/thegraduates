@@ -30,6 +30,7 @@ group :development, :test do
   gem 'faker'
   gem 'rspec-rails'
   gem 'web-console', '~> 2.0'
+  gem "pry"
   gem 'spring'
 end
 

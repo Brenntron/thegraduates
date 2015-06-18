@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :load_user, except: [:index, :show, :edit, :update]
+  before_action :load_user, except: [:index, :edit, :update]
 
   def index
     @users = User.order("last_name").page(params[:page]).per(PER_PAGE)
@@ -27,8 +27,8 @@ class UsersController < ApplicationController
 
   def create
     if @user.save
-      auto_lagin(@user)
-      redirect_to root_path, notice: "Welcome, #{user.first_name user.last_name}!"
+      auto_login(@user)
+      redirect_to root_path, notice: "Welcome, #{@user.first_name}!"
     else
       flash.alert = "Please fix the errors to continue."
       render :new
@@ -49,6 +49,6 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :email, :bio, :password, :password_confirmation)
+    params.require(:user).permit(:first_name, :last_name, :email, :linkedin, :twitter, :bio, :password, :password_confirmation)
   end
 end

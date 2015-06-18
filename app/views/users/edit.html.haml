@@ -1,0 +1,11 @@
+- content_for(:page_title) do
+  %h1 Edit Profile
+
+= simple_form_for @user, url: user_path, method: :put do |f|
+  = f.input :first_name
+  = f.input :last_name
+  = f.input :bio
+  = f.input :email
+  = f.input :twitter
+  = f.input :linkedin
+  = f.button :submit, "Save Changes"

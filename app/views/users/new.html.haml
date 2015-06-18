@@ -1,0 +1,14 @@
+- content_for(:page_title) do
+  %h1 "Put in yo stuff
+
+= simple_form_for @user, url: user_path do |f|
+  = f.input :first_name
+  = f.input :last_name
+  = f.input :email
+  = f.input :linkedin
+  = f.input :twitter
+  = f.input :current_employer
+  = f.input :bio
+  = f.input :password
+  = f.input :password_confirmation
+  = f.button :submit, "Sign Up"
