@@ -12,12 +12,12 @@
         %ul
           %li= link_to "The Graduates", root_path
           - if !logged_in?
-            - unless controller_name == "users" && action_name != "index"
-              %li= link_to "Sign Up", new_user_path
+            - unless (controller_name == "users" || controller_name == "user_registrations") && action_name != "index"
+              %li= link_to "Sign Up", new_user_registration_path
             - unless controller_name == "user_sessions"
               %li= link_to "Sign In", new_user_session_path
           - else
-            %li#edit_user= link_to "Edit Profile", edit_user_path
+            %li#edit_user= link_to "Edit Profile", edit_user_registration_path
             %li#sign_out= link_to "Sign Out", user_session_path, method: :delete
       %header
         = content_for?(:page_title) ? content_for(:page_title) : "Page Title"

@@ -1,7 +1,7 @@
 - content_for(:page_title) do
   %h1 Edit Profile
 
-= simple_form_for @user, url: user_path, method: :put do |f|
+= simple_form_for @user, url: user_registration_path, method: :put do |f|
   = f.input :first_name
   = f.input :last_name
   = f.input :bio

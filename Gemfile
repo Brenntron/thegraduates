@@ -2,11 +2,9 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.2.1'
 
-gem 'activeadmin', '~> 1.0.0.pre1'
 gem 'bitter'
 gem 'bourbon'
 gem 'coffee-rails', '~> 4.1.0'
-gem 'devise'
 gem 'haml-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
