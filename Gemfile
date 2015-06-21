@@ -2,11 +2,9 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.2.1'
 
-gem 'activeadmin', '~> 1.0.0.pre1'
 gem 'bitter'
 gem 'bourbon'
 gem 'coffee-rails', '~> 4.1.0'
-gem 'devise'
 gem 'haml-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
@@ -30,6 +28,7 @@ group :development, :test do
   gem 'faker'
   gem 'rspec-rails'
   gem 'web-console', '~> 2.0'
+  gem "pry"
   gem 'spring'
 end
 
