@@ -3,6 +3,12 @@
 
 %h2 Our Alumni:
 
+= form_tag users_path, method: :get do
+  %p
+    = text_field_tag :query, params[:query]
+    = submit_tag "Search", name: nil
+
+
 = paginate @users
 
 %ul.user_pagination
