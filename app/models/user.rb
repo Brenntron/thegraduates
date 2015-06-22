@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  require "pg_search"
   include PgSearch
   pg_search_scope :search_by_full_name, against: [:first_name, :last_name],
     :using => {
