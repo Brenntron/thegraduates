@@ -13,7 +13,7 @@ feature "User Signs Up" do
     fill_in "Password", with: "fightclub"
     fill_in "Password confirmation", with: "fightclub"
     fill_in "Linkedin", with: Faker::Internet.url("linkedin.com")
-    fill_in "Twitter", with: Faker::Internet.url("twitter.com")
+    fill_in "Twitter", with: "edward"
     fill_in "Bio", with: Faker::Lorem.paragraph(2)
     fill_in "Current employer", with: Faker::Company.name
     click_button "Sign Up"
@@ -33,7 +33,7 @@ feature "User Signs Up" do
     fill_in "Password", with: "fightclub"
     fill_in "Password confirmation", with: "food"
     fill_in "Linkedin", with: Faker::Internet.url("linkedin.com")
-    fill_in "Twitter", with: Faker::Internet.url("twitter.com")
+    fill_in "Twitter", with: Faker::Name.first_name
     fill_in "Bio", with: Faker::Lorem.paragraph(2)
     fill_in "Current employer", with: Faker::Company.name
     click_button "Sign Up"
@@ -50,7 +50,7 @@ feature "User Signs Up" do
     fill_in "Password", with: "fightclub"
     fill_in "Password confirmation", with: "fightclub"
     fill_in "Linkedin", with: Faker::Internet.url("linkedin.com")
-    fill_in "Twitter", with: Faker::Internet.url("twitter.com")
+    fill_in "Twitter", with: Faker::Internet.user_name
     fill_in "Bio", with: Faker::Lorem.paragraph(2)
     fill_in "Current employer", with: Faker::Company.name
     click_on "Sign Up"
@@ -76,7 +76,7 @@ feature "User Signs Up" do
     fill_in "Password", with: "fightclub"
     fill_in "Password confirmation", with: "fightclub"
     fill_in "Linkedin", with: Faker::Internet.url("linked.com")
-    fill_in "Twitter", with: Faker::Internet.url("twitter.com")
+    fill_in "Twitter", with: Faker::Name.first_name
     fill_in "Bio", with: Faker::Lorem.paragraph(2)
     fill_in "Current employer", with: Faker::Company.name
     click_button "Sign Up"

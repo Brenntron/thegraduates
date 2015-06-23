@@ -7,7 +7,7 @@ feature "user signs in" do
   end
 
   scenario "Returning user signs in" do
-    user = Fabricate(:user, first_name: "Jan")
+    user = Fabricate(:user, first_name: "Jan", twitter: "jan")
     fill_in "Email", with: user.email
     fill_in "Password", with: "password1"
     click_button "Sign In"
@@ -22,7 +22,7 @@ feature "user signs in" do
   end
 
   scenario "returning user attempts to sign in with incorrect password" do
-    user = Fabricate(:user, first_name: "Bob")
+    user = Fabricate(:user, first_name: "Bob", twitter: "bob")
     fill_in "Email", with: user.email
     fill_in "Password", with: "wrongpassword"
     click_button "Sign In"
@@ -36,7 +36,7 @@ feature "user signs in" do
   end
 
   scenario "user signs in with wrong email" do
-    Fabricate(:user, email: "jimbo@example.com", password: "Awesomeness", password_confirmation: "Awesomeness")
+    Fabricate(:user, email: "jimbo@example.com", password: "Awesomeness", password_confirmation: "Awesomeness", twitter: "jimbob")
     fill_in "Email", with: "bobbie@example.com"
     fill_in "Password", with: "Awesomeness"
     click_on "Sign In"

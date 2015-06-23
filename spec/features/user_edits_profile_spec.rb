@@ -1,7 +1,7 @@
 feature "user edits profile" do
 
-  let(:brennan){ Fabricate(:user, first_name: "Brennan", last_name: "Willingham", password: "password1", password_confirmation: "password1") }
-  let(:jimbob){ Fabricate(:user, first_name: "Jimbob", last_name: "Thorne") }
+  let(:brennan){ Fabricate(:user, first_name: "Brennan", last_name: "Willingham", password: "password1", password_confirmation: "password1", twitter: "brennan") }
+  let(:jimbob){ Fabricate(:user, first_name: "Jimbob", last_name: "Thorne", twitter: "jimbob") }
 
   scenario "can't edit profile if logged out" do
     visit user_path(brennan)

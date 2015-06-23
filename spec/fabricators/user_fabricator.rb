@@ -3,7 +3,7 @@ Fabricator(:user) do
   last_name             { Faker::Name.last_name }
   email                 { Faker::Internet.email }
   linkedin              { Faker::Internet.url("linkedin.com") }
-  twitter               { Faker::Internet.url("twitter.com") }
+  twitter               { Faker::Name.first_name.downcase }
   current_employer      { Faker::Company.name }
   bio                   { Faker::Lorem.paragraph(2) }
   password              { "password1" }

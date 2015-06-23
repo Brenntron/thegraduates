@@ -10,7 +10,7 @@ RSpec.describe User, type: :model do
     it { should validate_length_of(:last_name).is_at_least(3) }
     it { should validate_presence_of(:bio) }
     it { should allow_value("https://www.linkedin.com/in/brennanwillingham").for(:linkedin).on(:create) }
-    it { should allow_value("https://www.twitter.com/brenntron").for(:twitter).on(:create) }
+    it { should allow_value("brenntron").for(:twitter).on(:create) }
     it { should validate_confirmation_of(:password) }
     it { should validate_presence_of(:password).on(:create) }
     it { should_not validate_presence_of(:password).on(:update) }
