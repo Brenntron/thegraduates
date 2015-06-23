@@ -13,8 +13,8 @@ class UserRegistrationsController < ApplicationController
     @user = current_user
     @user.assign_attributes(user_params)
     if @user.save
-      redirect_to root_path
-      flash.notice "Your profile has been updated."
+      redirect_to user_path(@user)
+      flash.notice = "Your profile has been updated."
     else
       flash.alert = "Please fix the errors to continue."
       render :edit

@@ -5,16 +5,7 @@
   .bio
     %p= "Bio: #{@user.bio}"
   .info
-    - if @user.current_employer.present?
-      %p= "Current Employer: #{@user.current_employer}"
-    - else
-      %p= "N/A"
     %p= "Email: #{@user.email}"
-    - if @user.twitter.present?
-      %p= "Twitter: @#{@user.twitter}"
-    - else
-      %p= "N/A"
-    - if @user.linkedin.present?
-      %p= "LinkedIn: @#{@user.linkedin}"
-    - else
-      %p= "N/A"
+    %p= info?(@user.current_employer, "Current Employer")
+    %p= info?(@user.twitter, "Twitter")
+    %p= info?(@user.linkedin, "LinkedIn")
