@@ -12,7 +12,6 @@ gem 'kaminari'
 gem 'neat'
 gem 'pg'
 gem 'pg_search'
-gem 'rails_admin'
 gem 'sass-rails', '~> 5.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'simple_form'

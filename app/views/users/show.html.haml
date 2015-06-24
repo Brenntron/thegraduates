@@ -7,5 +7,9 @@
   .info
     %p= "Email: #{@user.email}"
     %p= info?(@user.current_employer, "Current Employer")
-    %p= info?(@user.twitter, "Twitter")
-    %p= info?(@user.linkedin, "LinkedIn")
+    %p
+      %a{ :href => "https://twitter.com/#{@user.twitter}" }
+        =info?(@user.twitter, "Twitter")
+    %p
+      %a{ :href => "https://www.linkedin.com/in/#{@user.linkedin}" }
+        =info?(@user.linkedin, "LinkedIn")
