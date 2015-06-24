@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   include PgSearch
-  pg_search_scope :search_by_full_name, against: [:first_name, :last_name],
+  pg_search_scope :search_text, against: [:first_name, :last_name, :graduation_date, :cohort],
     :using => {
       :tsearch => {dictionary: "english"}
     }
@@ -12,10 +12,9 @@ class User < ActiveRecord::Base
   validates_format_of :twitter, with: /^([a-zA-Z](_?[a-zA-Z0-9]+)*_?|_([a-zA-Z0-9]+_?)*)$/, multiline: true, allow_blank: true
   validates :password, confirmation: true
   validates :password, :password_confirmation, presence: { on: :create }
-
-  def self.text_search(query)
+  def self.search(query)
     if query.present?
-      where("first_name ilike :q or last_name ilike :q", q: "%#{query}")
+      search_text(query)
     else
       all
     end

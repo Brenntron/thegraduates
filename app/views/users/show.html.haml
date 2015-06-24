@@ -6,6 +6,8 @@
     %p= "Bio: #{@user.bio}"
   .info
     %p= "Email: #{@user.email}"
+    %p= "Cohort: #{@user.cohort}"
+    %p= "Graduation Date: #{@user.graduation_date}"
     %p= info?(@user.current_employer, "Current Employer")
     %p
       %a{ :href => "https://twitter.com/#{@user.twitter}" }
