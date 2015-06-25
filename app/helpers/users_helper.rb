@@ -5,11 +5,11 @@ module UsersHelper
     image_tag(gravatar_url, alt:user.first_name, class: "gravatar")
   end
 
-  def info?(attr, field)
+  def info?(attr)
     if attr.present?
-      "#{field}: #{attr}"
+      "#{attr}"
     else
-      "#{field}: N/A"
+      "N/A"
     end
   end
 end

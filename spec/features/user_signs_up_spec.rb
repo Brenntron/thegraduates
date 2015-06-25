@@ -12,7 +12,7 @@ feature "User Signs Up" do
     fill_in "Email", with: "edward@norton.com"
     fill_in "Password", with: "fightclub"
     fill_in "Password confirmation", with: "fightclub"
-    fill_in "Linkedin", with: Faker::Internet.url("linkedin.com")
+    fill_in "Linkedin", with: Faker::Internet.user_name
     fill_in "Twitter", with: "edward"
     fill_in "Bio", with: Faker::Lorem.paragraph(2)
     fill_in "Current employer", with: Faker::Company.name

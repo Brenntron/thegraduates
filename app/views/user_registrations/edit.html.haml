@@ -4,7 +4,7 @@
 = simple_form_for @user, url: user_registration_path, method: :put do |f|
   = f.input :first_name
   = f.input :last_name
-  = f.input :bio
+  = f.input :bio, as: :text
   = f.input :email
   = f.input :current_employer
   = f.input :cohort

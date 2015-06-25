@@ -2,16 +2,24 @@
   =gravatar_for @user
   %h1.name= "#{@user.first_name} #{@user.last_name}"
 
+.profile-container
   .bio
-    %p= "Bio: #{@user.bio}"
+    %h4 Bio:
+    %p #{@user.bio}
   .info
-    %p= "Email: #{@user.email}"
-    %p= "Cohort: #{@user.cohort}"
-    %p= "Graduation Date: #{@user.graduation_date}"
-    %p= info?(@user.current_employer, "Current Employer")
+    %h4 Email:
+    %p #{@user.email}
+    %h4 Cohort:
+    %p #{@user.cohort}
+    %h4 Graduation Date:
+    %p #{@user.graduation_date}
+    %h4 Current Employer:
+    %p= info?(@user.current_employer)
+    %h4 Twitter:
     %p
       %a{ :href => "https://twitter.com/#{@user.twitter}" }
-        =info?(@user.twitter, "Twitter")
+        =info?(@user.twitter)
+    %h4 LinkedIn:
     %p
       %a{ :href => "https://www.linkedin.com/in/#{@user.linkedin}" }
-        =info?(@user.linkedin, "LinkedIn")
+        =info?(@user.linkedin)

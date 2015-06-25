@@ -4,7 +4,7 @@
 %h2 Our Alumni:
 
 = form_tag users_path, method: :get do
-  %p
+  %p.search
     = text_field_tag :query, params[:query]
     = submit_tag "Search", name: nil
 
