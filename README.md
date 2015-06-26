@@ -12,4 +12,4 @@ yes!
 
 ##See it in action!
 
-(thegraduates.herokuapp.com)[https://thegraduates.herokuapp.com]
+[thegraduates.herokuapp.com](https://thegraduates.herokuapp.com)
