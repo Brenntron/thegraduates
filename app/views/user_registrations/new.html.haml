@@ -5,8 +5,8 @@
   = f.input :first_name
   = f.input :last_name
   = f.input :email
-  = f.input :linkedin
-  = f.input :twitter
+  = f.input :twitter, hint: 'No @ symbol.'
+  = f.input :linkedin, hint: 'Put only the portion of the url after linkedin.com/in/.'
   = f.input :current_employer
   = f.input :bio, as: :text
   = f.input :cohort
