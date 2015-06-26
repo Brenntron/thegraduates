@@ -6,7 +6,7 @@ A directory app of NSS graduates.
 
 ##Is it good?
 
-yes
+yes!
 
 
 
