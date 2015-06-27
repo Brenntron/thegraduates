@@ -1,6 +1,6 @@
 - content_for(:page_title) do
   =gravatar_for @user
-  %h1.name= "#{@user.first_name} #{@user.last_name}"
+  %h1.name= "#{@user.first_name.capitalize} #{@user.last_name}"
 
 .profile-container
   .bio
